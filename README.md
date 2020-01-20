@@ -4,7 +4,7 @@
 
 # Qiskit Textbook Source Code - Japanese version
 
-翻訳の進め方についてはこちらをご覧ください：[翻訳の仕方.md](https://github.com/kifumi/qiskit-textbook/blob/ja/%E7%BF%BB%E8%A8%B3%E3%81%AE%E4%BB%95%E6%96%B9.md)
+翻訳の進め方についてはこちらをご覧ください：[翻訳の進め方.md](https://github.com/kifumi/qiskit-textbook/blob/ja/%E7%BF%BB%E8%A8%B3%E3%81%AE%E4%BB%95%E6%96%B9.md)
 
 こちらは、オープンソースの[Learn Quantum Computation using Qiskit](http://community.qiskit.org/textbook) テキストブックのレポジトリーです。このテキストブックは、大学の量子アルゴリズムの授業の補足として、また、量子プログラミングに興味のある方が自分で学習するためのガイドとして使用できます。
 
