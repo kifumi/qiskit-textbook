@@ -10,9 +10,10 @@
 
 Qiskit Communityチームからのご挨拶です！ Qiskitをベースとした大学の量子アルゴリズム/計算コースの補足教材となるよう、IBM Researchと共同でこのオープンソースの教科書を作り始めました。
 <img
-  src="images/qiskit_textbook_skills.png"
-  alt="To the traditional quantum computation course, the textbook adds Python and Qiskit foundations, quantum programming and quantum algorithms on today's hardware."
-  width="800px"
+  src="images/logo/logo_long.png"
+  alt="Learn Quantum Computing using Qiskit"
+  style="max-width: 600px; margin-bottom: 3em; margin-left: 35px;"
+  align="center"
 />
 
 この教科書の目標は、以下のエリアのスキルを開発することです。

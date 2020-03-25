@@ -1,9 +1,8 @@
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 
-# Custom
+### Mac OS ###
 .DS_Store
-.Thumbs.db
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
