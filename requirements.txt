@@ -1,2 +1,5 @@
 qiskit
 matplotlib
+torch
+torchvision
+-e ./qiskit-textbook-src
