@@ -31,6 +31,9 @@
 - title: Using the Textbook
   not_numbered: true
   url: /using-the-textbook
+- title: Interactivity Index
+  not_numbered: true
+  url: /widgets-index
 - title: About
   not_numbered: true
   url: /about
@@ -103,7 +106,8 @@
       url: /ch-algorithms/grover
     - title: Quantum Counting
       url: /ch-algorithms/quantum-counting
-
+    - title: Quantum Key Distribution
+      url: /ch-algorithms/quantum-key-distribution
 
 - title: Quantum Algorithms for Applications
   url: /ch-applications/algs_for_apps_index

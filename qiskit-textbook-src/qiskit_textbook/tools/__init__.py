@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-
-from IPython.display import display, Markdown, Latex
+from IPython.display import display, Markdown, Math
 import numpy as np
+import math
+from fractions import Fraction
 
 def vector2latex(vector, precision=5, pretext="", display_output=True):
     """replace with array_to_latex"""
@@ -17,7 +18,7 @@ def vector2latex(vector, precision=5, pretext="", display_output=True):
     out_latex = out_latex[:-4] # remove trailing ampersands
     out_latex += "\end{bmatrix} $$"
     if display_output:
-        display(Markdown(out_latex))
+        display(Math(out_latex))
     else:
         return out_latex
 
@@ -38,7 +39,7 @@ def unitary2latex(unitary, precision=5, pretext="", display_output=True):
         out_latex += " \\\\\n"
     out_latex += "\end{bmatrix} $$"
     if display_output:
-        display(Markdown(out_latex))
+        display(Math(out_latex))
     else:
         return out_latex
 
@@ -76,25 +77,70 @@ def num_to_latex(num, precision=5):
     """
     r = np.real(num)
     i = np.imag(num)
+    common_factor = None
     
+    # try to factor out common terms in imaginary numbers
+    if np.isclose(abs(r), abs(i)) and not np.isclose(r, 0):
+        common_factor = abs(r)
+        r = r/common_factor
+        i = i/common_factor
+    
+    common_terms = {
+        1/math.sqrt(2): '\\tfrac{1}{\\sqrt{2}}',
+        1/math.sqrt(3): '\\tfrac{1}{\\sqrt{3}}',
+        math.sqrt(2/3): '\\sqrt{\\tfrac{2}{3}}',
+        math.sqrt(3/4): '\\sqrt{\\tfrac{3}{4}}',
+        1/math.sqrt(8): '\\tfrac{1}{\\sqrt{8}}'
+    }
     def proc_value(val):
         # See if val is close to an integer
         val_mod = np.mod(val, 1)
         if (np.isclose(val_mod, 0) or np.isclose(val_mod, 1)):
             # If so, return that integer
             return str(int(np.round(val)))
+        # Otherwise, see if it matches one of the common terms
+        for term, latex_str in common_terms.items():
+             if np.isclose(abs(val), term):
+                    if val > 0:
+                        return latex_str
+                    else:
+                        return "-" + latex_str
+        # try to factorise val nicely
+        frac = Fraction(val).limit_denominator()
+        num, denom = frac.numerator, frac.denominator
+        if num + denom < 20:
+            if val > 0:
+                return ("\\tfrac{%i}{%i}" % (abs(num), abs(denom)))
+            else:
+                return ("-\\tfrac{%i}{%i}" % (abs(num), abs(denom)))
         else:
-            # Otherwise return val as a decimal
+            # Failing everything else, return val as a decimal
             return "{:.{}f}".format(val, precision).rstrip("0")
     
+    if common_factor != None:
+        common_facstring = proc_value(common_factor)
+    else:
+        common_facstring = None
     realstring = proc_value(r)
-    imagstring = proc_value(i)
+    if i > 0:
+        operation = "+"
+        imagstring = proc_value(i)
+    else:
+        operation = "-"
+        imagstring = proc_value(-i)
+    if imagstring == "1":
+        imagstring = ""
     if imagstring == "0":
         return realstring
     if realstring == "0":
-        return imagstring + "i"
+        if operation == "-":
+            return "-{}i".format(imagstring)
+        else:
+            return "{}i".format(imagstring)
+    if common_facstring != None:
+        return "{}({} {} {}i)".format(common_facstring, realstring, operation, imagstring)
     else:
-        return "{} + {}i".format(realstring, imagstring)
+        return "{} {} {}i".format(realstring, operation, imagstring)
 
 def vector_to_latex(vector, precision=5, pretext=""):
     """Latex representation of a complex numpy array (with dimension 1)
@@ -146,6 +192,7 @@ def array_to_latex(array, precision=5, pretext="", display_output=True):
             matrix (ndarray): The array to be converted to latex, must have dimension 1 or 2.
             precision: (int) For numbers not close to integers, the number of decimal places to round to.
             pretext: (str) Latex string to be prepended to the latex, intended for labels.
+            display_output: (bool) if True, uses IPython.display to display output, otherwise returns the latex string.
         
         Returns:
             str: Latex representation of the array, wrapped in $$
@@ -166,6 +213,6 @@ def array_to_latex(array, precision=5, pretext="", display_output=True):
     else:
         raise ValueError("array_to_latex can only convert numpy ndarrays of dimension 1 or 2")
     if display_output:
-        display(Markdown(output))
+        display(Math(output))
     else:
         return(output)
