@@ -1,6 +1,104 @@
-/* Put your custom CSS here */
-.left {
-    margin-left: 0px;
-    margin-right: 5px;
-    float: left;
+/* This is mostly patching up things I couldn't track down in _sass */
+
+.interact-button {
+	font-family: "IBM Plex Sans","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif !important;
+}
+
+.thebelab-button {
+	font-family: "IBM Plex Sans";
+	font-size: 0.9em;
+}
+
+h2.c-sidebar__title {
+	font-weight: normal;
+	color: #F4F4F4;
+}
+
+h2.c-sidebar__title:hover{
+	text-decoration: none;
+}
+
+div.jp-OutputArea > :first-child {
+        border-top: 1px solid #DDE1E6 !important;
+}
+
+h2.c-sidebar__title {
+	margin-top: 6px;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #BE95FF;
+}
+
+a:visited {
+	color: #BE95FF;
+}
+
+.c-sidebar__entry:hover {
+	color: #F4F4F4;
+}
+
+.c-sidebar__entry--active:hover {
+	color: #BE95FF;
+}
+
+details {
+	padding: 18px;
+	background-color: #F2F4F8;
+	border: 1px solid #DDE1E6;
+	margin-bottom: 12px;
+}
+
+svg {
+	max-width: 45vw;
+}
+
+pre {
+	overflow: auto;
+}
+
+p.sidebar_footer {
+	padding-bottom: 60px;
+}
+
+/* Hide contents on bigger screens */
+@media only screen and (min-width: 860px) {
+	.jb_cell.tag_contents {
+		display: none;
+	}
+}
+
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	empty-cells: show !important;
+}
+
+tbody {
+	border-bottom: 1px solid black !important;
+}
+
+/* Fix strange table striping choice */
+tr:nth-child(even) {background-color: #F2F4F8 !important;}
+
+td {
+	border: 0px !important;
+	border-left: 1px solid black !important;
+	border-right: 1px solid black !important;
+}
+
+thead td {
+	border-bottom: 1px solid black !important;
+}
+
+.MathJax_Display {
+	margin-top: 24px !important;
+	margin-bottom: 24px !important;
+}
+
+div.text_cell_render > p > img, div.text_cell_render > p > a > img {
+	margin-top: 36px;
+	margin-bottom: 36px;
 }
