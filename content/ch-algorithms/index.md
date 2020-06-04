@@ -6,9 +6,4 @@ Now we have covered the basics of quantum computing, we are now ready to introdu
 
 現在、教科書に追加するために以下のトピックを開発中です。
 
-1. BB84 を使用した通信の確保
-2. NISQハードウェアのための量子アルゴリズムの概要
-
-```python
-
-```
+- NISQハードウェアのための量子アルゴリズムの概要
