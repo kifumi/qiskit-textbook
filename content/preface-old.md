@@ -1,5 +1,4 @@
-# Learn Quantum Computation using Qiskit
-
+# Qiskit を使った量子計算の学習
 
 <img
   src="images/logo/logo_long.png"
@@ -9,14 +8,14 @@
 />
 
 <p>
-Greetings from the Qiskit Community team! We initiated this open-source textbook in collaboration with IBM Research as a university quantum algorithms/computation course supplement based on Qiskit. The Qiskit textbook helps you:
+Qiskit Communityチームからのご挨拶です！ Qiskitをベースとした大学の量子アルゴリズム/計算コースの補足教材となるよう、IBM Researchと共同でこのオープンソースのテキストを作り始めました。Qiskit textbookは次のことに役立ちます：
 </p>
 
 <table style="width:100%; margin: 2em; margin-left: 35px;">
   <tr style="font-size: large; border: None;">
-    <th style="text-align: center; border: None;">Learn Quantum Computing Theory</th>
-    <th style="text-align: center; border: None;">Learn to Code Quantum Programs</th>
-    <th style="text-align: center; border: None;">Experiment with Real Devices</th>
+    <th style="text-align: center; border: None;">量子コンピューティング理論の学習</th>
+    <th style="text-align: center; border: None;">量子プログラムコードの学習</th>
+    <th style="text-align: center; border: None;">実デバイスでの実験</th>
   </tr>
   <tr style="background-color: White;">
     <td style="border: None;">
@@ -45,7 +44,7 @@ Greetings from the Qiskit Community team! We initiated this open-source textbook
 
 <div align="center" style="font-size: 250%; margin: 1em;">
     <a href="using-the-textbook.html">
-        Get Started!
+        さあ始めましょう!
     </a>
 </div>
 

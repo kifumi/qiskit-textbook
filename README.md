@@ -2,17 +2,20 @@
 | stable: | [![Build Status](https://travis-ci.com/Qiskit/qiskit-textbook.svg?branch=stable)](https://travis-ci.com/Qiskit/qiskit-textbook) | master: | [![Build Status](https://travis-ci.com/Qiskit/qiskit-textbook.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-textbook) |
 |---|---|---|---|
 
-# Qiskit Textbook Source Code
+# Qiskit Textbook Source Code - Japanese version
 
-This is the repository for the interactive open-source [Learn Quantum Computation using Qiskit](http://community.qiskit.org/textbook) textbook. The textbook is intended for use as a university quantum algorithms course supplement as well as a guide for self-learners who are interested in learning quantum programming.
+翻訳の進め方と翻訳担当についてはこちらをご覧ください：[翻訳の進め方.md](https://github.com/kifumi/qiskit-textbook/blob/ja/%E7%BF%BB%E8%A8%B3%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9.md)
 
-The Jupyter notebooks corresponding to each section of the textbook can be found in the [`content` folder](content/). The code in these notebooks will constantly be updated to the latest version of Qiskit.
+こちらは、オープンソースの[Learn Quantum Computation using Qiskit](http://community.qiskit.org/textbook) テキストブックのレポジトリーです。このテキストブックは、大学の量子アルゴリズムの授業の補足として、また、量子プログラミングに興味のある方が自分で学習するためのガイドとして使用できます。
 
-The notebooks are compiled into html and exported to [the website](http://community.qiskit.org/textbook).
+[`content` folder](content/)フォルダーに、テキストブックの各セクションに対応するJupyterノートブックがあります。 このノートブックのコードは、常に最新バージョンのQiskitに更新される予定です。
+
+ノートブックはhtmlにコンパイルされ、[ウェブサイト](http://community.qiskit.org/textbook)にエクスポートされます。
+
 
 # Contributors Guide
 
-## General Guidelines 
+## General Guidelines
 
 We love contributions and need them to ensure the textbook is a high-quality resource. If you notice any mistakes and want to fix them, then feel free to go ahead and make a pull request. If you want to contribute original content, there are a few things you can do to make sure your efforts have the biggest impact:
 
