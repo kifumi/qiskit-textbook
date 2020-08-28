@@ -16,10 +16,10 @@
     padding-top: 4px;
   }
 
-  span.hamburger-box {
-    width: 40px;
-    height: 30px;
-    padding-left: 10px;
+  span.hamburger {
+    cursor: pointer;
+    margin-left: -($spacing-unit-tiny + 6px);
+    margin-top: -4px;
   }
 
   .c-topbar__buttons {
@@ -48,8 +48,10 @@
 
   button {
     min-width: 100px !important;
-    border: 1px white solid !important;
+    border: 1px solid #212121;
     border-radius: 0 !important;
+    margin-top: 4px;
+    margin-left: 0px;
   }
 }
 

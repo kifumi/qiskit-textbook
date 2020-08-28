@@ -25,29 +25,22 @@
 # generate a demo book by running `jupyter-book create mybook --demo`
 # ==============================
 
-- title: Preface
+- title: Learn Quantum Computation using Qiskit
   not_numbered: true
   url: /preface
-- title: Using the Textbook
-  not_numbered: true
-  url: /using-the-textbook
-- title: About
-  not_numbered: true
-  url: /about
 
-- divider: true
+- title: What is Quantum?
+  url: /what-is-quantum
+  not_numbered: true
 
 - title: Prerequisites
-  url: /ch-prerequisites/python-and-jupyter-notebooks.html
+  url: /ch-prerequisites/setting-the-environment.html
   external: true
-  expand_sections: true
   sections:
+    - title: Setting Up Your Environment
+      url: /ch-prerequisites/setting-the-environment
     - title: Python and Jupyter Notebooks
       url: /ch-prerequisites/python-and-jupyter-notebooks
-    - title: Qiskit
-      url: /ch-prerequisites/qiskit
-    - title: Linear Algebra
-      url: /ch-prerequisites/linear_algebra
 
 - title: Quantum States and Qubits
   url: /ch-states/introduction.html
@@ -62,6 +55,8 @@
       url : /ch-states/representing-qubit-states
     - title: Single Qubit Gates
       url: /ch-states/single-qubit-gates
+    - title: The Case for Quantum
+      url: /ch-states/case-for-quantum
 
 - title: Multiple Qubits and Entanglement
   url: /ch-gates/introduction.html
@@ -74,40 +69,24 @@
       url: /ch-gates/multiple-qubits-entangled-states
     - title: Phase Kickback
       url: /ch-gates/phase-kickback
-    - title: Proving Universality
-      url: /ch-gates/proving-universality
     - title: More Circuit Identities
       url: /ch-gates/more-circuit-identities
+    - title: Proving Universality
+      url: /ch-gates/proving-universality
 
-- title: Problems
-  url: /ch-ex/ex1.html
-  external: true
-  not_numbered: true
-  expand_sections: true
-  sections:
-    - title: Set 1. Classical Logic Gates with Quantum Circuits
-      url: /ch-ex/ex1
-      not_numbered: true
-    - title: Set 2. Basic Synthesis of Single-Qubit Gates
-      url: /ch-ex/ex2
-      not_numbered: true
-    - title: Set 3. Building the Best AND Gate
-      url: /ch-ex/ex3
-      not_numbered: true
-    - title: Hello Qiskit Game
-      url: /ch-ex/hello-qiskit
-      not_numbered: true
 
 - title: Quantum Protocols and Quantum Algorithms
   url: /ch-algorithms/index
   expand_sections: true
   sections:
+    - title: Defining Quantum Circuits
+      url: /ch-algorithms/defining-quantum-circuits
     - title: Quantum Teleportation
       url: /ch-algorithms/teleportation
     - title: Superdense Coding
       url: /ch-algorithms/superdense-coding
-    - title: Deutsch-Josza Algorithm
-      url: /ch-algorithms/deutsch-josza
+    - title: Deutsch-Jozsa Algorithm
+      url: /ch-algorithms/deutsch-jozsa
     - title: Bernstein-Vazirani Algorithm
       url: /ch-algorithms/bernstein-vazirani
     - title: Simon's Algorithm
@@ -116,11 +95,14 @@
       url: /ch-algorithms/quantum-fourier-transform
     - title: Quantum Phase Estimation
       url: /ch-algorithms/quantum-phase-estimation
+    - title: Shor's Algorithm
+      url: /ch-algorithms/shor
     - title: Grover's Algorithm
       url: /ch-algorithms/grover
     - title: Quantum Counting
       url: /ch-algorithms/quantum-counting
-
+    - title: Quantum Key Distribution
+      url: /ch-algorithms/quantum-key-distribution
 
 - title: Quantum Algorithms for Applications
   url: /ch-applications/algs_for_apps_index
@@ -149,7 +131,6 @@
 
 - title: Investigating Quantum Hardware Using Quantum Circuits
   url: /ch-quantum-hardware/index-circuits
-  external: true
   expand_sections: true
   sections:
     - title: Introduction to Quantum Error Correction using Repetition Codes
@@ -163,18 +144,51 @@
 
 - title: Investigating Quantum Hardware Using Microwave Pulses
   url: /ch-quantum-hardware/index-pulses
-  external: true
   expand_sections: true
   sections:
-    - title: Calibrating Qubits with OpenPulse
+    - title: Calibrating Qubits with Qiskit Pulse
       url: /ch-quantum-hardware/calibrating-qubits-openpulse
     - title: Accessing Higher Energy States
       url: /ch-quantum-hardware/accessing_higher_energy_states
+    - title: Introduction to Transmon Physics
+      url: /ch-quantum-hardware/transmon-physics
+    - title: Circuit Quantum Electrodynamics
+      url: /ch-quantum-hardware/cQED-JC-SW
 
-- title: Demos
-  url: /ch-demos/piday-code.html
-  external: true
+- title: Problem Sets & Exercises
+  url: /ch-ex/index
   expand_sections: true
   sections:
+    - title: Set 1. Classical Logic Gates with Quantum Circuits
+      url: /ch-ex/ex1
+      not_numbered: true
+    - title: Set 2. Basic Synthesis of Single-Qubit Gates
+      url: /ch-ex/ex2
+      not_numbered: true
+    - title: Set 3. Building the Best AND Gate
+      url: /ch-ex/ex3
+      not_numbered: true
+
+- title: Appendix
+  url: /ch-appendix/index
+  expand_sections: false
+  sections:
+    - title: Linear Algebra
+      url: /ch-appendix/linear_algebra
+    - title: Qiskit
+      url: /ch-appendix/qiskit
+
+- title: Games & Demos
+  url: /ch-demos/index
+  expand_sections: true
+  sections:
+    - title: Hello Qiskit Game
+      url: /ch-ex/hello-qiskit
+      not_numbered: true
     - title: Estimating Pi Using Quantum Phase Estimation Algorithm
       url: /ch-demos/piday-code
+      not_numbered: true
+    - title: Interactivity Index
+      url: /widgets-index
+      not_numbered: true
+
