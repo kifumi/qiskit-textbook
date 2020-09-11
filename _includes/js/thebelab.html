@@ -45,7 +45,7 @@
             const hardwareTag = 'uses-hardware'
             const hardwareQuery = `.jb_cell.tag_${hardwareTag}`
             const noHardwareQuery = `.jb_cell:not(.tag_${hardwareTag})`
-            const codeCells = document.querySelectorAll(`${noHardwareQuery} pre`)
+            const codeCells = document.querySelectorAll(`${noHardwareQuery} pre[id^="codecell"]`)
             codeCells.forEach((codeCell, index) => {
                 const id = codeCellId(index)
 
@@ -102,8 +102,8 @@
                 button.remove();
             });
 
-            // Remove outputs since they'll be stale
-            const outputs = document.querySelectorAll('.output *, .output')
+            // Remove outputs since they'll be stale (ignore outputs with removed inputs)
+            const outputs = document.querySelectorAll(':not(.tag_remove_input) > .output_wrapper')
             outputs.forEach((output, index) => {
                 output.remove();
             });
