@@ -1,3 +1,3 @@
-# About This Section
+# このセクションについて
 
-Finding new quantum algorithms, or new applications of existing algorithms is an area of active research. This section explains algorithms and applications from recent papers that are not explained in traditional textbooks. This should help bring the reader closer to understanding current areas of research. The textbook is a living document and this section will be updated to keep up with developments in the field.
+新しい量子アルゴリズム、または既存のアルゴリズムの新しいアプリケーションを見つけることは、活発に研究されている領域です。このセクションでは、従来の教科書では説明されていない最近の論文のアルゴリズムとアプリケーションについて説明します。読者は、現在の研究分野をよりよく理解できるようになります。この教科書は進化するので、このセクションはこの分野の研究開発に合わせて更新されます。
