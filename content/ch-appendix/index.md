@@ -1,2 +1,2 @@
 
-This is an appendix containing in-depth recaps of linear algebra concepts and a crash-course in qiskit for those already familiar with quantum.
+このAppendixの章には、線形代数の概念の詳細な振り返りと、すでに量子に精通している人のためのqiskitの最短講座が含まれています。
